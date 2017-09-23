@@ -9,7 +9,7 @@ public class XmlConfigWithBeanFactory {
     public static void main(String[] args) {
         DefaultListableBeanFactory factory = new DefaultListableBeanFactory();
         XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(factory);
-        String filename = "src/main/resources/app-context.xml";
+        String filename = "src/main/resources/beanfactory/app-context.xml";
         reader.loadBeanDefinitions(new FileSystemResource(filename));
 
         Oracle oracle = (Oracle) factory.getBean("oracle");

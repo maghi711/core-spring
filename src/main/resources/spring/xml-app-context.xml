@@ -13,4 +13,14 @@
         <property name="ageInSeconds" value="1009843200" />
     </bean>
 
+    <bean id="injectSimpleConfig" class="com.maghi711.spring.springdeveloper.xml.InjectSimpleConfig" />
+
+    <bean id="injectSimpleSpel" class="com.maghi711.spring.springdeveloper.xml.InjectSimpleSpel">
+        <property name="name" value="#{injectSimpleConfig.name}" />
+        <property name="age" value="#{injectSimpleConfig.age + 1}" />
+        <property name="height" value="#{injectSimpleConfig.height}" />
+        <property name="programmer" value="#{injectSimpleConfig.programmer}" />
+        <property name="ageInSeconds" value="#{injectSimpleConfig.ageInSeconds}" />
+    </bean>
+
 </beans>

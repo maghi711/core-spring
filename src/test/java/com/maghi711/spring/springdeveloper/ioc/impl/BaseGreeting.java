@@ -1,5 +1,6 @@
 package com.maghi711.spring.springdeveloper.ioc.impl;
 
+import com.maghi711.spring.springdeveloper.ioc.Greeting;
 import org.springframework.stereotype.Component;
 
 @Component

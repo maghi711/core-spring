@@ -2,6 +2,8 @@ package com.maghi711.spring.springdeveloper.applicationcontext;
 
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
+
 @Service("messageRenderer")
 public class StandardOutMessageRenderer implements MessageRenderer {
     private MessageProvider messageProvider;
@@ -15,6 +17,7 @@ public class StandardOutMessageRenderer implements MessageRenderer {
     }
 
     @Override
+    @Resource(name = "messageProvider")
     public void setMessageProvider(MessageProvider provider) {
         this.messageProvider = provider;
     }

@@ -7,4 +7,8 @@ public class BookwormOracle implements Oracle {
         return "Encyclopedia are a waste of money - use the internet(wikipedia)";
     }
 
+    @Override
+    public String toString() {
+        return defineMeaningOfLife();
+    }
 }

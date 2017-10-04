@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="oracle" class="com.maghi711.spring.springdeveloper.beanfactory.BookwormOracle" />
+
+    <bean id="injectCollection" class="com.maghi711.spring.springdeveloper.xml.CollectionInjection">
+        <property name="map">
+            <map>
+                <entry key="someValue">
+                    <value>Hello World!</value>
+                </entry>
+                <entry key="oracleBean">
+                    <ref bean="oracle"/>
+                </entry>
+            </map>
+        </property>
+        <property name="props">
+            <props>
+                <prop key="firstName">Aadavan</prop>
+                <prop key="secondName">Mahesh</prop>
+            </props>
+        </property>
+        <property name="set">
+            <set>
+                <value>Hello World in the set</value>
+                <ref bean="oracle" />
+                <value>Aadavan in a set</value>
+            </set>
+        </property>
+        <property name="list">
+            <list>
+                <value>Hello World in the list</value>
+                <ref bean="oracle" />
+                <value>Aadavan Mahesh in List</value>
+            </list>
+        </property>
+    </bean>
+
+</beans>
